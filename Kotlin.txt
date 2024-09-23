@@ -2,15 +2,20 @@
  * You can edit, run, and share this code.
  * play.kotlinlang.org
  */
+enum class Daypart {
+    Morning,
+    Afternoon,
+    Evening,
+}
 data class Event(
     
     val title: String,
     val description: String? = null,
-    val dayPart: String,
+    val dayPart: Daypart,
     val durationInMinutes: Int,
     
 )
 fun main(){
-    val event = Event("Caden Finley", "Doing Homework.", "All day Every Day", 100000000)
+    val event = Event("Caden Finley", "Doing Homework.", Daypart.Afternoon, 100000000)
     println(event)
 }
