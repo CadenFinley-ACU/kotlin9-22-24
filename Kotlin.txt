@@ -39,5 +39,5 @@ fun main(){
     val summary = allEvents.groupBy{it.daypart}
 	summary.forEach{(daypart,events)->print("$daypart:${events.size}\n")}
     
-    
+    println("${allEvents.last().title}")
 }
